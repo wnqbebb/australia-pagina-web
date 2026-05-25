@@ -3,906 +3,925 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modo Creador — El Sistema Premium para Clonarte con IA</title>
-    <meta name="description" content="El sistema completo para clonar tu cara, voz y movimiento con IA. Produce contenido UGC Premium todos los días sin grabarte. Acceso por $29 USD.">
+    <title>Modo Creador - El sistema completo para clonarte con IA</title>
+    <meta name="description" content="El sistema completo para clonar tu cara, tu voz y tu movimiento con IA para crear contenido UGC Premium.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@1,400;1,600&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <div class="bg-ambient"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <div class="noise-overlay"></div>
     <div class="bg-grid"></div>
-    <canvas id="particles-canvas"></canvas>
 
-    <!-- Custom cursor -->
-    <div class="cursor-ring" id="cursor-ring"></div>
-    <div class="cursor-dot" id="cursor-dot"></div>
-
-    <!-- Step progress indicator -->
-    <nav class="step-progress" id="step-progress" aria-label="Pasos">
-        <div class="progress-dot active" data-step="step-1" title="Paso 1"></div>
-        <div class="progress-dot" data-step="step-2" title="Paso 2"></div>
-        <div class="progress-dot" data-step="step-3" title="Paso 3"></div>
-        <div class="progress-dot" data-step="step-4" title="Paso 4"></div>
-        <div class="progress-dot" data-step="step-5" title="Paso 5"></div>
-        <div class="progress-dot" data-step="step-6" title="Paso 6"></div>
-    </nav>
-
-    <!-- HEADER -->
     <header class="site-header" id="site-header">
         <div class="container nav-container">
-            <a href="#hero" class="logo">
-                Modo<span>Creador</span>
-            </a>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="#hero" class="nav-link active">El Problema</a></li>
-                    <li><a href="#sistema" class="nav-link">El Sistema</a></li>
-                    <li><a href="#verdad" class="nav-link">La Verdad</a></li>
-                    <li><a href="#oferta" class="nav-link">Modo Creador</a></li>
-                </ul>
-            </nav>
-            <button class="btn-cta" onclick="window.location.href='#oferta'">Entrar al Programa →</button>
+            <a href="#hero" class="logo">Modo<span>Creador</span></a>
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero container" id="hero">
-        <div class="hero-badge" data-reveal>
-            <div class="dot"></div>
-            Creator Economy Premium · IA Humana · UGC
-        </div>
-        <h1 data-reveal data-reveal-delay="1">Sabes que podrías estar <span class="text-highlight">ganando dinero</span> con tu contenido.</h1>
-        <p class="subtitle" data-reveal data-reveal-delay="2">
-            Pero sigues esperando. Esperando estar listo. Esperando tener equipo. Esperando que alguien te descubra.
-        </p>
-        <button class="btn-cta" style="padding: 1.1rem 3rem; font-size: 1rem;" onclick="window.location.href='#introduccion'" data-reveal data-reveal-delay="3">
-            Revelar la Verdad ↓
-        </button>
-
-        <div class="hero-stats" data-reveal data-reveal-delay="4">
-            <div class="stat-item">
-                <span class="stat-number" data-count="50">0</span>
-                <span class="stat-label">Cupos de Lanzamiento</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-                <span class="stat-number" data-count="29" data-prefix="$">$0</span>
-                <span class="stat-label">Precio de Lanzamiento</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-                <span class="stat-number">∞</span>
-                <span class="stat-label">Acceso de por Vida</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- PAIN / INTRODUCCIÓN EMOCIONAL -->
-    <section class="pain-section container-narrow" id="introduccion">
-
-        <p class="pain-text" data-reveal>
-            Y mientras esperas, otros —con menos talento que tú— ya están cobrando como agencia.
-        </p>
-
-        <p class="pain-text" data-reveal>
-            Y sabes que tienes algo que decir…
-        </p>
-
-        <blockquote class="pain-quote" data-reveal>
-            "Pero cada vez que abres la cámara, te paralizas. No te sientes listo. No te ves profesional."
-        </blockquote>
-
-        <p class="pain-text" data-reveal>
-            Y mientras tanto, otros creadores —con menos talento que tú— están consiguiendo marcas, ventas y autoridad.
-        </p>
-
-        <p class="pain-text" data-reveal>
-            <strong>No es justo. Y no es tu culpa.</strong> Nadie te enseñó cómo usar la IA a tu favor.
-        </p>
-
-        <div class="pain-separator" data-reveal>
-            <span class="sep-diamond"></span>
-        </div>
-
-        <p class="pain-revelation" data-reveal>
-            Hoy ya no necesitas grabarte para crecer.
-        </p>
-
-        <p class="pain-text" data-reveal>
-            Existe un sistema para clonarte con IA —tu cara, tu voz, tu movimiento— y producir contenido todos los días sin volver a abrir la cámara. Pero sobre todo: poder enviarlo a las marcas como <em class="font-accent" style="font-size: 1.12rem;">contenido UGC Premium</em> y ganar dinero de forma recurrente.
-        </p>
-
-        <p class="pain-text" data-reveal style="font-size: 1.05rem; color: var(--neutral);">
-            Así que vamos al grano. Los pasos son:
-        </p>
-
-    </section>
-
-    <!-- EL SISTEMA COMPLETO — PASO A PASO -->
-    <section class="steps-section container" id="sistema">
-        <div class="section-header" data-reveal>
-            <span class="section-tag"><span class="tag-dot"></span> Lead Magnet Completo</span>
-            <h2>El Sistema de Clonación <span class="text-highlight">Paso a Paso</span></h2>
-            <p>
-                Esta guía transforma una simple selfie en un avatar que habla, se mueve y produce contenido todos los días. Cada fase es estratégica. Si un paso falla, todo lo demás colapsa.
-            </p>
-        </div>
-
-        <div class="steps-container">
-
-            <!-- ============================================================ -->
-            <!-- PASO 1 — CREACIÓN DEL ROSTRO -->
-            <!-- ============================================================ -->
-            <article class="step-card" id="step-1" data-reveal>
-                <div class="step-number">01</div>
-
-                <div class="step-meta">
-                    <span class="step-badge">1</span>
-                    <span class="step-phase">Fase 1 · La Base de Todo</span>
+    <main>
+        <!-- ═══════════════════ HERO ═══════════════════ -->
+        <section class="hero container" id="hero" data-flow-section>
+            <!-- Floating parallax tool badges -->
+            <div class="hero-float-layer" aria-hidden="true">
+                <div class="float-el float-el--1" data-depth="2.0">
+                    <img src="nombres%20de%20herramientas/ElevenLabs.png" alt="">
+                    <span>ElevenLabs</span>
                 </div>
-
-                <h3><span class="step-emoji">👤</span> Creación del Rostro</h3>
-                <p class="step-desc">
-                    El rostro define si tu clon es creíble o no. Un retrato hiperrealista que conserve tu identidad exacta es lo que asegura consistencia en cada imagen, video y animación que crees después. Se usan herramientas especializadas en preservación de identidad, micro-detalle de piel y calidad RAW fotográfica.
-                </p>
-
-                <div class="options-grid options-grid-4">
-
-                    <!-- Opción A: NanoBanana Pro -->
-                    <div class="option-box">
-                        <div class="option-header">
-                            <div class="tool-logo-wrap">
-                                <span class="tool-logo-fallback logo-teal">NB</span>
-                            </div>
-                            <div class="option-info">
-                                <div class="option-type">Opción A</div>
-                                <div class="option-title">NanoBanana Pro</div>
-                            </div>
-                            <span class="option-rec">RECOM.</span>
-                        </div>
-                        <p class="option-best-for">Mejor para: Exactitud facial extrema</p>
-                        <ul class="option-features">
-                            <li>Líder en exactitud de rostro</li>
-                            <li>Renderiza piel RAW fotorrealista</li>
-                            <li>Soporta múltiples ángulos</li>
-                            <li>Ideal para fotorrealismo en redes</li>
-                        </ul>
-                        <div class="prompt-container">
-                            <div class="prompt-header">
-                                <div class="prompt-tag">Prompt NanoBanana</div>
-                                <button class="btn-copy-prompt">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-                                    <span class="btn-text">Copiar</span>
-                                </button>
-                            </div>
-                            <div class="prompt-body">Retrato fotorrealista 85mm f/1.4 RAW de esta persona exacta, misma identidad, mismo cabello, mismas proporciones. Iluminación de estudio suave, fondo blanco limpio, micro-detalle alto con textura de piel real y poros. Preservar estructura facial con precisión.</div>
-                        </div>
-                    </div>
-
-                    <!-- Opción B: Flux 2.0 -->
-                    <div class="option-box">
-                        <div class="option-header">
-                            <div class="tool-logo-wrap">
-                                <img class="tool-logo-img" src="https://cdn.simpleicons.org/flux/101820" alt="Flux" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                                <span class="tool-logo-fallback logo-violet" style="display:none">F2</span>
-                            </div>
-                            <div class="option-info">
-                                <div class="option-type">Opción B</div>
-                                <div class="option-title">Flux 2.0</div>
-                            </div>
-                        </div>
-                        <p class="option-best-for">Mejor para: Realismo emocional</p>
-                        <ul class="option-features">
-                            <li>Simulación de iluminación cinematográfica</li>
-                            <li>Excelente con piel, poros, micro-imperfecciones</li>
-                            <li>Color y tonalidad natural</li>
-                        </ul>
-                        <div class="prompt-container">
-                            <div class="prompt-header">
-                                <div class="prompt-tag">Prompt Flux 2.0</div>
-                                <button class="btn-copy-prompt">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-                                    <span class="btn-text">Copiar</span>
-                                </button>
-                            </div>
-                            <div class="prompt-body">Crea un retrato hiperrealista de esta persona con iluminación suave cinematográfica, estética de profundidad 85mm, textura RAW, arrugas y poros naturales. Preservar identidad exacta con realismo HDR.</div>
-                        </div>
-                    </div>
-
-                    <!-- Opción C: Seedream 4 -->
-                    <div class="option-box">
-                        <div class="option-header">
-                            <div class="tool-logo-wrap">
-                                <span class="tool-logo-fallback logo-ember">S4</span>
-                            </div>
-                            <div class="option-info">
-                                <div class="option-type">Opción C</div>
-                                <div class="option-title">Seedream 4</div>
-                            </div>
-                        </div>
-                        <p class="option-best-for">Mejor para: Close-ups ultra nítidos</p>
-                        <ul class="option-features">
-                            <li>Modelo de piel y textura más fino</li>
-                            <li>Excelente para fotografía profesional cerrada</li>
-                            <li>Mantiene identidad con precisión extrema</li>
-                        </ul>
-                        <div class="prompt-container">
-                            <div class="prompt-header">
-                                <div class="prompt-tag">Prompt Seedream 4</div>
-                                <button class="btn-copy-prompt">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-                                    <span class="btn-text">Copiar</span>
-                                </button>
-                            </div>
-                            <div class="prompt-body">Genera un retrato frontal RAW con textura de piel fotorrealista, asimetría natural y claridad alta. Mantener identidad exacta, forma del cabello y geometría facial.</div>
-                        </div>
-                    </div>
-
-                    <!-- Opción D: ChatGPT 2 -->
-                    <div class="option-box">
-                        <div class="option-header">
-                            <div class="tool-logo-wrap">
-                                <img class="tool-logo-img" src="https://cdn.simpleicons.org/openai/101820" alt="OpenAI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                                <span class="tool-logo-fallback logo-slate" style="display:none">GPT</span>
-                            </div>
-                            <div class="option-info">
-                                <div class="option-type">Opción D</div>
-                                <div class="option-title">ChatGPT 2</div>
-                            </div>
-                        </div>
-                        <p class="option-best-for">Mejor para: Empezar rápido y fácil</p>
-                        <ul class="option-features">
-                            <li>Integración nativa con generación de imagen</li>
-                            <li>Rápida iteración con lenguaje natural</li>
-                            <li>Buena para variaciones rápidas de rostro</li>
-                            <li>Ideal si recién estás empezando</li>
-                        </ul>
-                        <div class="prompt-container">
-                            <div class="prompt-header">
-                                <div class="prompt-tag">Prompt ChatGPT 2</div>
-                                <button class="btn-copy-prompt">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-                                    <span class="btn-text">Copiar</span>
-                                </button>
-                            </div>
-                            <div class="prompt-body">Genera un retrato hiperrealista de esta persona conservando identidad facial exacta. Estilo fotografía profesional 8K, iluminación de estudio, fondo neutro, alta nitidez en rostro y textura de piel real.</div>
-                        </div>
-                    </div>
-
+                <div class="float-el float-el--2" data-depth="1.4">
+                    <img src="nombres%20de%20herramientas/Kling%20AI.jpg" alt="">
+                    <span>Kling AI</span>
                 </div>
-
-                <div class="step-critical">
-                    <strong>Por qué este paso es crítico:</strong> Si la identidad falla en la base, todo el clon falla. El video, la voz, el contenido de autoridad —todo depende de un rostro consistente y creíble.
+                <div class="float-el float-el--3" data-depth="2.6">
+                    <img src="nombres%20de%20herramientas/Seedream%204.png" alt="">
+                    <span>Seedream 4</span>
                 </div>
-            </article>
-
-            <!-- ============================================================ -->
-            <!-- PASO 2 — DATASET VISUAL -->
-            <!-- ============================================================ -->
-            <article class="step-card" id="step-2" data-reveal>
-                <div class="step-number">02</div>
-
-                <div class="step-meta">
-                    <span class="step-badge">2</span>
-                    <span class="step-phase">Fase 2 · Variedad Visual</span>
+                <div class="float-el float-el--4" data-depth="1.0">
+                    <img src="nombres%20de%20herramientas/nano%20banana%20pro.jpg" alt="">
+                    <span>NanoBanana</span>
                 </div>
-
-                <h3><span class="step-emoji">📸</span> Construir tu Dataset Visual</h3>
-                <p class="step-desc">
-                    Una sola foto no alcanza. Necesitas entre 10 y 20 imágenes del mismo rostro clonado en distintas poses, outfits, ángulos y escenarios. Un dataset le da flexibilidad a tu clon: escenas caminando, hablando, gesticulando, en distintos moods. Y también aumenta tu presencia de autoridad —la gente te ve en múltiples contextos.
-                </p>
-
-                <div class="options-grid options-grid-2">
-
-                    <div class="option-box">
-                        <div class="option-header">
-                            <span class="option-letter">✓</span>
-                            <div class="option-info">
-                                <div class="option-type">Variaciones Obligatorias</div>
-                                <div class="option-title">Qué debe incluir tu dataset</div>
-                            </div>
-                        </div>
-                        <ul class="option-features">
-                            <li>De pie / sentado / caminando naturalmente</li>
-                            <li>Sonriendo / serio corporativo / hablando</li>
-                            <li>Outfit casual chic / oficina premium / elegante</li>
-                            <li>Ángulos: frontal, ¾, perfil izquierdo y derecho</li>
-                            <li>Interior de oficina luminosa y exteriores urbanos</li>
-                        </ul>
-                    </div>
-
-                    <div class="option-box">
-                        <div class="option-header">
-                            <span class="option-letter">P</span>
-                            <div class="option-info">
-                                <div class="option-type">Prompt Base</div>
-                                <div class="option-title">Consistencia de Dataset</div>
-                            </div>
-                        </div>
-                        <p class="option-best-for">Aplícalo en cualquiera de las herramientas del Paso 1</p>
-                        <div class="prompt-container">
-                            <div class="prompt-header">
-                                <div class="prompt-tag">Prompt de Dataset</div>
-                                <button class="btn-copy-prompt">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-                                    <span class="btn-text">Copiar</span>
-                                </button>
-                            </div>
-                            <div class="prompt-body">Plano medio fotorrealista de esa persona caminando naturalmente, misma identidad y proporciones. Tomado con lente 50mm en exteriores, luz natural suave, movimiento real de tela, sombras limpias.</div>
-                        </div>
-                    </div>
-
+                <div class="float-el float-el--5" data-depth="1.8">
+                    <img src="nombres%20de%20herramientas/Magnific%20AI.jpg" alt="">
+                    <span>Magnific AI</span>
                 </div>
-
-                <div class="step-critical">
-                    <strong>Por qué este paso es crítico:</strong> Sin variedad, tu clon va a parecer una foto estática repetida. Con dataset, parece una persona real con vida.
-                </div>
-            </article>
-
-            <!-- ============================================================ -->
-            <!-- PASO 3 — UPSCALE 4K–8K -->
-            <!-- ============================================================ -->
-            <article class="step-card" id="step-3" data-reveal>
-                <div class="step-number">03</div>
-
-                <div class="step-meta">
-                    <span class="step-badge">3</span>
-                    <span class="step-phase">Fase 3 · Listo para Video</span>
-                </div>
-
-                <h3><span class="step-emoji">🚀</span> Escalar a 4K–8K <span style="color: var(--emotional); font-style: italic; font-size: 1.1rem; font-weight: 600;">(No Negociable)</span></h3>
-                <p class="step-desc">
-                    Este paso es lo que separa el contenido amateur del que parece campaña real. Sin resolución 4K+, las herramientas de movimiento generan artefactos y se nota la IA al instante. El upscaling mejora textura de piel, elimina ruido y da claridad cinematográfica.
-                </p>
-
-                <div class="instruction-strip">
-                    <div class="arrow-steps">
-                        <span class="step-pill">Subir imagen</span>
-                        <span class="arr">→</span>
-                        <span class="step-pill">Elegir ×4 o ×8</span>
-                        <span class="arr">→</span>
-                        <span class="step-pill">Activar modo detalle</span>
-                        <span class="arr">→</span>
-                        <span class="step-pill">Exportar PNG 4K–8K</span>
-                    </div>
-                </div>
-
-                <div class="options-grid options-grid-4">
-
-                    <!-- OpenArt -->
-                    <div class="option-box">
-                        <div class="option-header">
-                            <div class="tool-logo-wrap">
-                                <span class="tool-logo-fallback logo-violet">OA</span>
-                            </div>
-                            <div class="option-info">
-                                <div class="option-type">Opción A</div>
-                                <div class="option-title">OpenArt</div>
-                            </div>
-                        </div>
-                        <p class="option-best-for">Mejor para: Balance velocidad + calidad</p>
-                        <ul class="option-features">
-                            <li>Rápido y balanceado</li>
-                            <li>Buena claridad general</li>
-                            <li>Interfaz simple</li>
-                        </ul>
-                    </div>
-
-                    <!-- Magnific -->
-                    <div class="option-box">
-                        <div class="option-header">
-                            <div class="tool-logo-wrap">
-                                <span class="tool-logo-fallback logo-rose">MG</span>
-                            </div>
-                            <div class="option-info">
-                                <div class="option-type">Opción B</div>
-                                <div class="option-title">Magnific</div>
-                            </div>
-                            <span class="option-rec">DETALLE</span>
-                        </div>
-                        <p class="option-best-for">Mejor para: Textura de piel extrema</p>
-                        <ul class="option-features">
-                            <li>Detalle ultra. Insuperable para poros</li>
-                            <li>Control de alucinación de detalles</li>
-                            <li>Estándar para contenido de lujo</li>
-                        </ul>
-                    </div>
-
-                    <!-- Lupa AI -->
-                    <div class="option-box">
-                        <div class="option-header">
-                            <div class="tool-logo-wrap">
-                                <span class="tool-logo-fallback logo-teal">LA</span>
-                            </div>
-                            <div class="option-info">
-                                <div class="option-type">Opción C</div>
-                                <div class="option-title">Lupa AI</div>
-                            </div>
-                            <span class="option-rec">RECOM.</span>
-                        </div>
-                        <p class="option-best-for">Mejor para: Realismo facial</p>
-                        <ul class="option-features">
-                            <li>El más realista del mercado</li>
-                            <li>Diseñado específicamente para rostros humanos</li>
-                            <li>Resultados naturales sin sobre-procesamiento</li>
-                        </ul>
-                    </div>
-
-                    <!-- Google Flow -->
-                    <div class="option-box">
-                        <div class="option-header">
-                            <div class="tool-logo-wrap">
-                                <img class="tool-logo-img" src="https://cdn.simpleicons.org/google" alt="Google" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                                <span class="tool-logo-fallback logo-sky" style="display:none">G</span>
-                            </div>
-                            <div class="option-info">
-                                <div class="option-type">Opción D</div>
-                                <div class="option-title">Google Flow</div>
-                            </div>
-                        </div>
-                        <p class="option-best-for">Mejor para: Producción en escala</p>
-                        <ul class="option-features">
-                            <li>El más versátil e integrado</li>
-                            <li>Permite encadenar mejoras automáticamente</li>
-                            <li>Ideal para procesar varias imágenes en lote</li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="step-critical">
-                    <strong>Por qué este paso es crítico:</strong> Saltarse el upscaling es la razón #1 por la que el contenido se ve hecho con IA. Aplicar este paso es el secreto de los avatares que engañan al ojo humano.
-                </div>
-            </article>
-
-            <!-- ============================================================ -->
-            <!-- PASO 4 — CLONAR VOZ -->
-            <!-- ============================================================ -->
-            <article class="step-card" id="step-4" data-reveal>
-                <div class="step-number">04</div>
-
-                <div class="step-meta">
-                    <span class="step-badge">4</span>
-                    <span class="step-phase">Fase 4 · Presencia Auténtica</span>
-                </div>
-
-                <h3><span class="step-emoji">🗣️</span> Clonar tu Voz</h3>
-                <p class="step-desc">
-                    La voz es el alma de tu avatar. Sin voz propia, no eres tú: es un robot. Las herramientas de clonación replican tu tono, tu respiración, tus pausas, tu emoción. Una voz clonada bien hecha es lo que hace que la gente te crea —y lo que activa la autoridad.
-                </p>
-
-                <div class="options-grid options-grid-2">
-
-                    <!-- ElevenLabs -->
-                    <div class="option-box">
-                        <div class="option-header">
-                            <div class="tool-logo-wrap">
-                                <img class="tool-logo-img" src="https://cdn.simpleicons.org/elevenlabs/101820" alt="ElevenLabs" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                                <span class="tool-logo-fallback logo-slate" style="display:none">EL</span>
-                            </div>
-                            <div class="option-info">
-                                <div class="option-type">Opción A</div>
-                                <div class="option-title">ElevenLabs</div>
-                            </div>
-                            <span class="option-rec">RECOM.</span>
-                        </div>
-                        <p class="option-best-for">Mejor para: Calidad de estudio</p>
-                        <ul class="option-features">
-                            <li>El estándar de la industria</li>
-                            <li>Replica acento, respiración, micro-pausas</li>
-                            <li>Soporta más de 30 idiomas</li>
-                            <li>Calidad de estudio profesional</li>
-                        </ul>
-                        <div class="prompt-container">
-                            <div class="prompt-header">
-                                <div class="prompt-tag">Prompt de Voz</div>
-                                <button class="btn-copy-prompt">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-                                    <span class="btn-text">Copiar</span>
-                                </button>
-                            </div>
-                            <div class="prompt-body">Clonar esta voz con claridad cálida y media-grave, micro-pausas naturales, acento limpio, respiración suave y ritmo articulado. Preservar tonalidad emocional para tutoriales y estilo de conversación profesional.</div>
-                        </div>
-                    </div>
-
-                    <!-- Hedra Voice -->
-                    <div class="option-box">
-                        <div class="option-header">
-                            <div class="tool-logo-wrap">
-                                <span class="tool-logo-fallback logo-gold">HD</span>
-                            </div>
-                            <div class="option-info">
-                                <div class="option-type">Opción B</div>
-                                <div class="option-title">Hedra Voice</div>
-                            </div>
-                        </div>
-                        <p class="option-best-for">Mejor para: Clones que hablan en video</p>
-                        <ul class="option-features">
-                            <li>Combina voz + sincronización de boca</li>
-                            <li>Ideal para talking-heads completos</li>
-                            <li>Integración directa con animación facial</li>
-                            <li>Flujo todo-en-uno para video UGC</li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="step-critical">
-                    <strong>Por qué este paso es crítico:</strong> Una imagen sin tu voz es un cascarón vacío. Tu voz es lo que hace que el contenido sea tuyo —y lo que hace que las marcas paguen.
-                </div>
-            </article>
-
-            <!-- ============================================================ -->
-            <!-- PASO 5 — IMAGEN A VIDEO -->
-            <!-- ============================================================ -->
-            <article class="step-card" id="step-5" data-reveal>
-                <div class="step-number">05</div>
-
-                <div class="step-meta">
-                    <span class="step-badge">5</span>
-                    <span class="step-phase">Fase 5 · Realismo Humano</span>
-                </div>
-
-                <h3><span class="step-emoji">🎬</span> Imagen a Video — Generación de Movimiento</h3>
-                <p class="step-desc">
-                    Aquí es donde tu imagen estática se vuelve un video real. Las herramientas interpretan el rostro, el cuerpo y el entorno para crear movimiento natural. Movimiento mediocre = se nota la IA al instante. Movimiento bien hecho = la gente jura que eres tú.
-                </p>
-
-                <div class="options-grid options-grid-4">
-
-                    <!-- VEO 3.1 -->
-                    <div class="option-box">
-                        <div class="option-header">
-                            <div class="tool-logo-wrap">
-                                <img class="tool-logo-img" src="https://cdn.simpleicons.org/google" alt="Google VEO" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                                <span class="tool-logo-fallback logo-sky" style="display:none">VEO</span>
-                            </div>
-                            <div class="option-info">
-                                <div class="option-type">Opción A</div>
-                                <div class="option-title">VEO 3.1</div>
-                            </div>
-                            <span class="option-rec">PREMIUM</span>
-                        </div>
-                        <p class="option-best-for">Mejor para: Campañas cinematográficas</p>
-                        <ul class="option-features">
-                            <li>La mejor para campañas de marca premium</li>
-                            <li>Control total por JSON</li>
-                            <li>Movimientos multi-capa y luz controlada</li>
-                        </ul>
-                        <div class="prompt-container">
-                            <div class="prompt-header">
-                                <div class="prompt-tag">Prompt VEO JSON</div>
-                                <button class="btn-copy-prompt">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-                                    <span class="btn-text">Copiar</span>
-                                </button>
-                            </div>
-                            <div class="prompt-body">{"description": "Sujeto cinematográfico de pie con movimiento suave y giro sutil de cabeza.", "camera": "estática con dolly lento", "lighting": "luz clave difusa suave", "subject_behavior": {"movement": "respiración suave, micro-giro de cabeza"}, "environment": "estudio limpio"}</div>
-                        </div>
-                    </div>
-
-                    <!-- Kling AI -->
-                    <div class="option-box">
-                        <div class="option-header">
-                            <div class="tool-logo-wrap">
-                                <img class="tool-logo-img" src="https://cdn.simpleicons.org/kling/101820" alt="Kling" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                                <span class="tool-logo-fallback logo-ember" style="display:none">K</span>
-                            </div>
-                            <div class="option-info">
-                                <div class="option-type">Opción B</div>
-                                <div class="option-title">Kling AI</div>
-                            </div>
-                            <span class="option-rec">RECOM.</span>
-                        </div>
-                        <p class="option-best-for">Mejor para: Movimiento humano natural</p>
-                        <ul class="option-features">
-                            <li>La más fácil para movimiento humano natural</li>
-                            <li>Parallax limpio en fondo</li>
-                            <li>Sin JSON, solo texto</li>
-                            <li>Perfecta para TikTok y Reels</li>
-                        </ul>
-                        <div class="prompt-container">
-                            <div class="prompt-header">
-                                <div class="prompt-tag">Prompt Kling</div>
-                                <button class="btn-copy-prompt">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
-                                    <span class="btn-text">Copiar</span>
-                                </button>
-                            </div>
-                            <div class="prompt-body">Movimiento cinematográfico con lente 35mm. Parpadeo natural y movimiento sutil de cabeza, ligero movimiento de hombros, postura calmada. Fondo con parallax. Emoción cálida, confiada, humana.</div>
-                        </div>
-                    </div>
-
-                    <!-- Seedance 2.0 -->
-                    <div class="option-box">
-                        <div class="option-header">
-                            <div class="tool-logo-wrap">
-                                <span class="tool-logo-fallback logo-violet">S2</span>
-                            </div>
-                            <div class="option-info">
-                                <div class="option-type">Opción C</div>
-                                <div class="option-title">Seedance 2.0</div>
-                            </div>
-                        </div>
-                        <p class="option-best-for">Mejor para: Movimiento corporal completo</p>
-                        <ul class="option-features">
-                            <li>Movimiento de cuerpo entero ultra fluido</li>
-                            <li>Gestos y expresiones naturales</li>
-                            <li>Excelente para escenas largas</li>
-                            <li>Ideal para UGC que vende producto</li>
-                        </ul>
-                    </div>
-
-                    <!-- Motion by Google -->
-                    <div class="option-box">
-                        <div class="option-header">
-                            <div class="tool-logo-wrap">
-                                <img class="tool-logo-img" src="https://cdn.simpleicons.org/google" alt="Google Motion" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                                <span class="tool-logo-fallback logo-sky" style="display:none">GM</span>
-                            </div>
-                            <div class="option-info">
-                                <div class="option-type">Opción D</div>
-                                <div class="option-title">Motion by Google</div>
-                            </div>
-                        </div>
-                        <p class="option-best-for">Mejor para: Talking-heads de autoridad</p>
-                        <ul class="option-features">
-                            <li>El más limpio para movimiento sutil</li>
-                            <li>Sincronización facial precisa</li>
-                            <li>Movimiento físicamente coherente</li>
-                            <li>Perfecto para contenido educativo</li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="step-critical">
-                    <strong>Por qué este paso es crítico:</strong> Movimiento mediocre = se nota la IA al instante. Movimiento bien hecho = la gente jurará que te grabaste con una cámara profesional.
-                </div>
-            </article>
-
-            <!-- ============================================================ -->
-            <!-- PASO 6 — ENSAMBLAJE FINAL -->
-            <!-- ============================================================ -->
-            <article class="step-card" id="step-6" data-reveal>
-                <div class="step-number">06</div>
-
-                <div class="step-meta">
-                    <span class="step-badge">6</span>
-                    <span class="step-phase">Fase 6 · Tu Máquina de Contenido</span>
-                </div>
-
-                <h3><span class="step-emoji">📦</span> Ensamblaje Final</h3>
-                <p class="step-desc">
-                    Exportas el video animado → sincronizas la voz → agregas captions → publicas. Repites el proceso. Tu clon se convierte en una máquina de contenido diaria sin que tú salgas en cámara ni una sola vez.
-                </p>
-
-                <table class="summary-table">
-                    <thead>
-                        <tr>
-                            <th>Paso</th>
-                            <th>Acción Clave</th>
-                            <th>Función Estratégica</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>01</td>
-                            <td>Crear rostro</td>
-                            <td>Base de identidad creíble</td>
-                        </tr>
-                        <tr>
-                            <td>02</td>
-                            <td>Construir dataset</td>
-                            <td>Variedad visual y vida al clon</td>
-                        </tr>
-                        <tr>
-                            <td>03</td>
-                            <td>Upscale 4K–8K</td>
-                            <td>Elimina lo artificial, agrega realismo</td>
-                        </tr>
-                        <tr>
-                            <td>04</td>
-                            <td>Clonar voz</td>
-                            <td>Presencia auténtica e identidad</td>
-                        </tr>
-                        <tr>
-                            <td>05</td>
-                            <td>Generar movimiento</td>
-                            <td>Realismo humano completo</td>
-                        </tr>
-                        <tr>
-                            <td>06</td>
-                            <td>Ensamblar y publicar</td>
-                            <td>Máquina de contenido de autoridad</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="step-critical" style="color: var(--cta);">
-                    Cada paso construye sobre el anterior. Pasos débiles rompen la ilusión. <strong style="color: var(--authority);">Pasos fuertes crean un clon perfecto.</strong>
-                </div>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- LA VERDAD INCÓMODA — Dark Section -->
-    <section class="truth-section" id="verdad">
-        <div class="container">
-
-            <div class="truth-eyebrow">Creator Economy · La Realidad</div>
-
-            <h2>Ahora,<br>la verdad incómoda.</h2>
-            <p class="truth-intro">
-                Ya tienes el mapa completo. Pero el mapa no es el sistema.
-            </p>
-
-            <div class="truth-questions">
-                <div class="truth-q">
-                    <span class="q-num">01</span>
-                    <p>¿Cuál de las herramientas elegir si nunca las has usado antes?</p>
-                </div>
-                <div class="truth-q">
-                    <span class="q-num">02</span>
-                    <p>¿Qué prompt exacto usar para que la IA <strong>NO</strong> te cambie la cara?</p>
-                </div>
-                <div class="truth-q">
-                    <span class="q-num">03</span>
-                    <p>¿Cómo combinar voz + imagen + video sin que se vea falso?</p>
-                </div>
-                <div class="truth-q">
-                    <span class="q-num">04</span>
-                    <p>¿Qué decir en el video para que las marcas te paguen tarifas de agencia?</p>
-                </div>
-                <div class="truth-q">
-                    <span class="q-num">05</span>
-                    <p>¿Cómo enviar tu UGC a marcas reales y cobrar como agencia —sin experiencia?</p>
+                <div class="float-el float-el--6" data-depth="3.0">
+                    <img src="nombres%20de%20herramientas/Google%20VEO%203.1.png" alt="">
+                    <span>VEO 3.1</span>
                 </div>
             </div>
 
-            <p class="truth-cta-text">
-                Eso no se aprende en una guía.<br>
-                Eso se domina con un sistema ya probado: <strong>"Modo Creador"</strong>.
-            </p>
-
-        </div>
-    </section>
-
-    <!-- MODO CREADOR — Programa -->
-    <section class="programa-section" id="programa">
-        <div class="container">
-            <div class="programa-inner">
-                <span class="section-tag" data-reveal><span class="tag-dot"></span> Acceso Inmediato</span>
-                <h2 data-reveal data-reveal-delay="1">Modo <span class="text-highlight">Creador</span></h2>
-                <p class="programa-desc" data-reveal data-reveal-delay="2">
-                    El sistema completo para crear cualquier tipo de contenido. Videos cortos, videos largos, podcasts, UGC con IA. Todo como si tuvieras una agencia, un estudio y un equipo de producción detrás.
-                </p>
-
-                <div class="programa-grid">
-                    <div class="programa-item" data-reveal data-reveal-delay="1">
-                        <div class="programa-check">✓</div>
-                        <p>Los <strong>prompts exactos</strong> que uso (probados, no genéricos)</p>
-                    </div>
-                    <div class="programa-item" data-reveal data-reveal-delay="2">
-                        <div class="programa-check">✓</div>
-                        <p>Las <strong>herramientas que sí valen la pena</strong> — sin gastar de más</p>
-                    </div>
-                    <div class="programa-item" data-reveal data-reveal-delay="3">
-                        <div class="programa-check">✓</div>
-                        <p>Cómo <strong>clonar tu cara, tu voz y tu movimiento</strong> sin que se vea falso</p>
-                    </div>
-                    <div class="programa-item" data-reveal data-reveal-delay="4">
-                        <div class="programa-check">✓</div>
-                        <p>Cómo <strong>escribir guiones que vendan</strong> sin ser copywriter</p>
-                    </div>
-                    <div class="programa-item" data-reveal data-reveal-delay="1">
-                        <div class="programa-check">✓</div>
-                        <p>Cómo <strong>editar desde tu celular</strong> como una marca real</p>
-                    </div>
-                    <div class="programa-item" data-reveal data-reveal-delay="2">
-                        <div class="programa-check">✓</div>
-                        <p>Cómo <strong>conseguir clientes y oportunidades</strong> con tu nuevo contenido</p>
-                    </div>
-                    <div class="programa-item" data-reveal data-reveal-delay="3">
-                        <div class="programa-check">✓</div>
-                        <p>Cómo crear tu <strong>portafolio de UGC con IA</strong> para marcas</p>
-                    </div>
-                    <div class="programa-item" data-reveal data-reveal-delay="4">
-                        <div class="programa-check">✓</div>
-                        <p>Cómo <strong>contactar a las marcas</strong> que sí pagan tarifas de agencia</p>
-                    </div>
-                    <div class="programa-item" data-reveal data-reveal-delay="1">
-                        <div class="programa-check">✓</div>
-                        <p><strong>Automatización con Claude</strong> para crear contenido en piloto automático</p>
-                    </div>
-                    <div class="programa-item" data-reveal data-reveal-delay="2">
-                        <div class="programa-check">✓</div>
-                        <p>Todas las <strong>actualizaciones futuras</strong> incluidas. Siempre al día.</p>
-                    </div>
+            <div class="hero-content" data-flow-inner>
+                <div class="section-tag" data-reveal>
+                    <div class="tag-dot"></div>
+                    IA Humana &bull; UGC Premium &bull; Modo Creador
                 </div>
-
-                <button class="btn-cta" style="padding: 1.2rem 3.5rem; font-size: 1.05rem;" onclick="window.location.href='#oferta'" data-reveal>
-                    Ver el Programa Completo →
-                </button>
+                <h1 data-reveal data-reveal-delay="1">
+                    Sabes que podrías estar <span class="text-highlight">ganando dinero</span> con tu contenido.
+                </h1>
+                <p class="subtitle" data-reveal data-reveal-delay="2">
+                    Pero sigues esperando. Esperando estar listo. Esperando tener equipo. Esperando que alguien te descubra.
+                </p>
+                <!-- TextRotate — rotating capability showcase -->
+                <div class="hero-rotate-row" data-reveal data-reveal-delay="3" aria-live="polite">
+                    <span class="hero-rotate-label">Hoy puedes:</span>
+                    <span class="text-rotate" id="hero-rotator" aria-atomic="true">crear tu avatar digital</span>
+                </div>
+                <div class="hero-bottom" data-reveal data-reveal-delay="4">
+                    <a class="btn-cta" href="#introduccion">
+                        Ir al sistema <span class="btn-arrow">↓</span>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- OFERTA FINAL -->
-    <section class="oferta-section" id="oferta">
-        <div class="container">
-            <div class="oferta-card" data-reveal>
-                <span class="oferta-badge">Solo los Primeros 50 · Cupos Limitados</span>
-                <h2>Modo Creador</h2>
-                <p class="oferta-desc">
-                    Pago único. Acceso ilimitado e inmediato. Todas las actualizaciones futuras incluidas. Sin mensualidades, sin sorpresas.
-                </p>
-
-                <ul class="oferta-features-list">
-                    <li>Prompts exactos probados en marcas reales</li>
-                    <li>Las herramientas precisas que sí funcionan</li>
-                    <li>Clonar tu cara, voz y gestos con sincronización perfecta</li>
-                    <li>Fórmula de guiones de alto enganche que venden</li>
-                    <li>Edición premium desde tu móvil</li>
-                    <li>Estrategia para conseguir marcas y tarifas de agencia</li>
-                    <li>Acceso de por vida + actualizaciones exclusivas</li>
-                </ul>
-
-                <div class="oferta-pricing">
-                    <span class="price-old">$297 USD</span>
-                    <span class="price-new">$29 <small>USD</small></span>
+        <!-- ═══════════════════ MARQUEE ═══════════════════ -->
+        <div class="marquee-strip" id="marquee-strip" aria-hidden="true">
+            <div class="marquee-glitch-overlay"></div>
+            <div class="marquee-inner">
+                <div class="marquee-track">
+                    <span class="marquee-item marquee-item--accent" data-text="Modo Creador">Modo Creador</span>
+                    <span class="marquee-sep">◆</span>
+                    <span class="marquee-item">UGC Premium</span>
+                    <span class="marquee-sep">◆</span>
+                    <span class="marquee-item marquee-item--gold" data-text="Clona tu voz">Clona tu voz</span>
+                    <span class="marquee-sep">◆</span>
+                    <span class="marquee-item">Sin cámara</span>
+                    <span class="marquee-sep">◆</span>
+                    <span class="marquee-item marquee-item--accent" data-text="Cobra como agencia">Cobra como agencia</span>
+                    <span class="marquee-sep">◆</span>
+                    <span class="marquee-item">IA Premium</span>
+                    <span class="marquee-sep">◆</span>
+                    <span class="marquee-item marquee-item--gold" data-text="Contenido Real">Contenido Real</span>
+                    <span class="marquee-sep">◆</span>
+                    <span class="marquee-item">Avatar Digital</span>
+                    <span class="marquee-sep">◆</span>
                 </div>
-
-                <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 2.8rem; font-weight: 600;">
-                    ⚡ Pago único. Acceso inmediato e ilimitado.
-                </p>
-
-                <button class="btn-oferta" id="btn-oferta-main" onclick="alert('Redirigiendo a la pasarela segura de Modo Creador...')">
-                    QUIERO ENTRAR A MODO CREADOR →
-                </button>
-
-                <p class="oferta-urgency">
-                    Solo los primeros 50 creadores tendrán acceso a $29 USD. Después sube a $59 USD.
-                </p>
-                <p class="oferta-closing">
-                    Empieza a verte como la marca que ya eres.
-                </p>
-
-                <div class="oferta-trust">
-                    <div class="trust-item">
-                        <span>🔒</span> Pago 100% Seguro
-                    </div>
-                    <div class="trust-item">
-                        <span>♾️</span> Acceso de por Vida
-                    </div>
-                    <div class="trust-item">
-                        <span>🔄</span> Actualizaciones Incluidas
-                    </div>
-                    <div class="trust-item">
-                        <span>⚡</span> Acceso Inmediato
-                    </div>
+                <div class="marquee-track marquee-track--dup" aria-hidden="true">
+                    <span class="marquee-item marquee-item--accent" data-text="Modo Creador">Modo Creador</span>
+                    <span class="marquee-sep">◆</span>
+                    <span class="marquee-item">UGC Premium</span>
+                    <span class="marquee-sep">◆</span>
+                    <span class="marquee-item marquee-item--gold" data-text="Clona tu voz">Clona tu voz</span>
+                    <span class="marquee-sep">◆</span>
+                    <span class="marquee-item">Sin cámara</span>
+                    <span class="marquee-sep">◆</span>
+                    <span class="marquee-item marquee-item--accent" data-text="Cobra como agencia">Cobra como agencia</span>
+                    <span class="marquee-sep">◆</span>
+                    <span class="marquee-item">IA Premium</span>
+                    <span class="marquee-sep">◆</span>
+                    <span class="marquee-item marquee-item--gold" data-text="Contenido Real">Contenido Real</span>
+                    <span class="marquee-sep">◆</span>
+                    <span class="marquee-item">Avatar Digital</span>
+                    <span class="marquee-sep">◆</span>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- FOOTER -->
+        <!-- ═══════════════════ PAIN / STORY ═══════════════════ -->
+        <section class="pain-section container-narrow" id="introduccion" data-flow-section>
+            <div data-flow-inner>
+                <p class="pain-text" data-reveal>
+                    Y mientras esperas, otros —con menos talento que tú— ya están cobrando como agencia.
+                </p>
+                <p class="pain-text" data-reveal>
+                    Y sabes que tienes algo que decir….
+                </p>
+                <p class="pain-text" data-reveal>
+                    Pero cada vez que abres la cámara, te paralizas.
+                </p>
+                <blockquote class="pain-quote font-accent" data-reveal>
+                    No te sientes listo. No te ves "profesional". Y mientras tanto, otros creadores —con menos talento que tú— están consiguiendo marcas, ventas y autoridad.
+                </blockquote>
+                <p class="pain-text" data-reveal>
+                    No es justo.
+                </p>
+                <p class="pain-text" data-reveal>
+                    Y no es tu culpa. Nadie te enseñó cómo usar la IA a tu favor.
+                </p>
+                <div class="pain-separator"></div>
+                <p class="pain-revelation" data-reveal>
+                    Hoy ya no necesitas grabarte para crecer.
+                </p>
+                <p class="pain-text" data-reveal>
+                    Existe un sistema para clonarte con IA —tu cara, tu voz, tu movimiento— y producir contenido todos los días sin volver a abrir la cámara. Pero sobre todo: poder enviarlo a las marcas como contenido UGC PREMIUM y ganar mucho dinero.
+                </p>
+                <p class="pain-text" data-reveal>
+                    Así que vamos al grano. Los pasos son:
+                </p>
+            </div>
+        </section>
+
+        <div class="brand-divider container" aria-hidden="true">
+            <svg class="brand-divider-svg" viewBox="0 0 400 2" preserveAspectRatio="none" overflow="visible">
+                <line class="divider-line" x1="0" y1="1" x2="400" y2="1"/>
+            </svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" overflow="visible">
+                <circle class="divider-dot" cx="12" cy="12" r="4"/>
+                <circle cx="12" cy="12" r="7" fill="none" stroke="#ffcd00" stroke-width="0.8" opacity="0.35"/>
+            </svg>
+            <span class="divider-label">El Sistema Completo</span>
+            <svg class="brand-divider-svg" viewBox="0 0 400 2" preserveAspectRatio="none" overflow="visible">
+                <line class="divider-line" x1="0" y1="1" x2="400" y2="1"/>
+            </svg>
+        </div>
+
+        <!-- ═══════════════════ STEPS ═══════════════════ -->
+        <section class="steps-section container" id="sistema" data-flow-section>
+            <div class="section-header" data-reveal>
+                <span class="section-tag"><span class="tag-dot"></span> El sistema completo para clonarte con IA</span>
+                <h2>EL SISTEMA COMPLETO PARA CLONARTE CON IA</h2>
+                <p>
+                    Esta guía transforma una simple selfie en un avatar que habla, se mueve y produce contenido todos los días sin que tú tengas que grabarte. Cada fase es estratégica. Si un paso falla, todo lo demás colapsa.
+                </p>
+            </div>
+
+            <div class="steps-wrap">
+                <svg class="steps-timeline-svg" aria-hidden="true" preserveAspectRatio="none">
+                    <line class="steps-timeline-path" x1="1" y1="0" x2="1" y2="100%"/>
+                </svg>
+
+                <div class="steps-container">
+                    <!-- PASO 1 -->
+                    <article class="step-card" id="step-1" data-reveal>
+                        <div class="step-number">01</div>
+                        <div class="step-meta">
+                            <span class="step-badge">1</span>
+                            <span class="step-phase">La base de todo</span>
+                        </div>
+                        <h3>PASO 1 — CREACIÓN DEL ROSTRO (LA BASE DE TODO)</h3>
+                        <p class="step-desc">
+                            El rostro define si tu clon es creíble o no. Un retrato hiperrealista que conserve tu identidad exacta es lo que asegura consistencia en cada imagen, video y animación que crees después.
+                        </p>
+                        <p class="step-desc">
+                            Por eso se usan herramientas especializadas en preservación de identidad, micro-detalle de piel y calidad RAW fotográfica.
+                        </p>
+
+                        <!-- Identity grid: 4K portrait placeholders with prompts -->
+                        <div class="identity-grid" data-reveal>
+                            <div class="identity-card">
+                                <div class="identity-placeholder">
+                                    <div class="placeholder-inner">
+                                        <div class="placeholder-icon">◎</div>
+                                        <span class="placeholder-res">4K · 8K</span>
+                                    </div>
+                                    <span class="identity-angle-label">Frontal</span>
+                                </div>
+                                <div class="identity-prompt-block">
+                                    <span class="identity-prompt-tag">Prompt generado</span>
+                                    <p>Retrato fotorrealista 85mm f/1.4, frontal directo, fondo blanco limpio, iluminación de estudio difusa, misma identidad facial exacta, poros y textura de piel RAW.</p>
+                                </div>
+                            </div>
+                            <div class="identity-card">
+                                <div class="identity-placeholder">
+                                    <div class="placeholder-inner">
+                                        <div class="placeholder-icon">◎</div>
+                                        <span class="placeholder-res">4K · 8K</span>
+                                    </div>
+                                    <span class="identity-angle-label">Tres cuartos</span>
+                                </div>
+                                <div class="identity-prompt-block">
+                                    <span class="identity-prompt-tag">Prompt generado</span>
+                                    <p>Retrato 3/4 hiperrealista, ángulo izquierdo, luz Rembrandt suave, misma identidad facial, cabello y proporciones exactas. Skin detail HDR.</p>
+                                </div>
+                            </div>
+                            <div class="identity-card">
+                                <div class="identity-placeholder">
+                                    <div class="placeholder-inner">
+                                        <div class="placeholder-icon">◎</div>
+                                        <span class="placeholder-res">4K · 8K</span>
+                                    </div>
+                                    <span class="identity-angle-label">Perfil</span>
+                                </div>
+                                <div class="identity-prompt-block">
+                                    <span class="identity-prompt-tag">Prompt generado</span>
+                                    <p>Perfil izquierdo RAW, estructura ósea precisa, mismo cabello, luz lateral limpia, fondo neutro gris suave. Micro-detalle de piel fotográfico.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tool-default-note" data-reveal>
+                            <span class="tool-default-star">★</span>
+                            <p>El sistema usa <strong>NanoBanana Pro</strong> por defecto. Puedes usar cualquier herramienta del stack indistintamente según tu acceso y preferencia.</p>
+                        </div>
+
+                        <div class="options-grid">
+                            <div class="option-box">
+                                <div class="option-header">
+                                    <span class="tool-logo-wrap logo-teal">
+                                        <img src="nombres%20de%20herramientas/nano%20banana%20pro.jpg" alt="NanoBanana Pro" class="tool-logo-img">
+                                    </span>
+                                    <div class="option-info">
+                                        <span class="option-type">Opción A — Por defecto</span>
+                                        <h4 class="option-title">NanoBanana Pro</h4>
+                                    </div>
+                                </div>
+                                <p class="option-best-for">La más precisa para mantener tu identidad facial.</p>
+                                <ul class="option-features">
+                                    <li>Líder en exactitud de rostro</li>
+                                    <li>Renderiza piel RAW fotorrealista</li>
+                                    <li>Soporta múltiples ángulos</li>
+                                    <li>Ideal para fotorrealismo en redes</li>
+                                </ul>
+                                <div class="prompt-container">
+                                    <div class="prompt-header">
+                                        <span class="prompt-tag">Prompt ejemplo</span>
+                                        <button class="btn-copy-prompt" type="button"><span class="btn-text">Copiar</span></button>
+                                    </div>
+                                    <div class="prompt-body">Retrato fotorrealista 85mm f/1.4 RAW de esta persona exacta, misma identidad, mismo cabello, mismas proporciones. Iluminación de estudio suave, fondo blanco limpio, micro-detalle alto con textura de piel real y poros. Preservar estructura facial con precisión.</div>
+                                </div>
+                            </div>
+
+                            <div class="option-box">
+                                <div class="option-header">
+                                    <span class="tool-logo-wrap logo-violet">
+                                        <img src="nombres%20de%20herramientas/Flux%202.0.jpg" alt="Flux 2.0" class="tool-logo-img">
+                                    </span>
+                                    <div class="option-info">
+                                        <span class="option-type">Opción B</span>
+                                        <h4 class="option-title">Flux 2.0</h4>
+                                    </div>
+                                </div>
+                                <p class="option-best-for">La más fuerte en realismo emocional.</p>
+                                <ul class="option-features">
+                                    <li>Simulación de iluminación cinematográfica</li>
+                                    <li>Excelente con piel, poros, micro-imperfecciones</li>
+                                    <li>Color y tonalidad natural</li>
+                                </ul>
+                                <div class="prompt-container">
+                                    <div class="prompt-header">
+                                        <span class="prompt-tag">Prompt ejemplo</span>
+                                        <button class="btn-copy-prompt" type="button"><span class="btn-text">Copiar</span></button>
+                                    </div>
+                                    <div class="prompt-body">Crea un retrato hiperrealista de esta persona con iluminación suave cinematográfica, estética de profundidad 85mm, textura RAW, arrugas y poros naturales. Preservar identidad exacta con realismo HDR.</div>
+                                </div>
+                            </div>
+
+                            <div class="option-box">
+                                <div class="option-header">
+                                    <span class="tool-logo-wrap logo-ember">
+                                        <img src="nombres%20de%20herramientas/Seedream%204.png" alt="Seedream 4" class="tool-logo-img">
+                                    </span>
+                                    <div class="option-info">
+                                        <span class="option-type">Opción C</span>
+                                        <h4 class="option-title">Seedream 4</h4>
+                                    </div>
+                                </div>
+                                <p class="option-best-for">La más nítida para close-ups.</p>
+                                <ul class="option-features">
+                                    <li>Modelo de piel y textura más fino</li>
+                                    <li>Excelente para fotografía profesional cerrada</li>
+                                    <li>Mantiene identidad con precisión extrema</li>
+                                </ul>
+                                <div class="prompt-container">
+                                    <div class="prompt-header">
+                                        <span class="prompt-tag">Prompt ejemplo</span>
+                                        <button class="btn-copy-prompt" type="button"><span class="btn-text">Copiar</span></button>
+                                    </div>
+                                    <div class="prompt-body">Genera un retrato frontal RAW con textura de piel fotorrealista, asimetría natural y claridad alta. Mantener identidad exacta, forma del cabello y geometría facial.</div>
+                                </div>
+                            </div>
+
+                            <div class="option-box">
+                                <div class="option-header">
+                                    <span class="tool-logo-wrap logo-slate">
+                                        <img src="nombres%20de%20herramientas/ChatGPT%202.png" alt="ChatGPT 2" class="tool-logo-img">
+                                    </span>
+                                    <div class="option-info">
+                                        <span class="option-type">Opción D</span>
+                                        <h4 class="option-title">ChatGPT 2</h4>
+                                    </div>
+                                </div>
+                                <p class="option-best-for">La más accesible para empezar.</p>
+                                <ul class="option-features">
+                                    <li>Integración nativa con generación de imagen</li>
+                                    <li>Rápida iteración con lenguaje natural</li>
+                                    <li>Buena para variaciones rápidas de rostro</li>
+                                    <li>Ideal si recién estás empezando</li>
+                                </ul>
+                                <div class="prompt-container">
+                                    <div class="prompt-header">
+                                        <span class="prompt-tag">Prompt ejemplo</span>
+                                        <button class="btn-copy-prompt" type="button"><span class="btn-text">Copiar</span></button>
+                                    </div>
+                                    <div class="prompt-body">Genera un retrato hiperrealista de esta persona conservando identidad facial exacta. Estilo fotografía profesional 8K, iluminación de estudio, fondo neutro, alta nitidez en rostro y textura de piel real.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step-critical">
+                            <strong>Por qué este paso es crítico</strong><br>
+                            Si la identidad falla en la base, todo el clon falla. El video, la voz, el contenido de autoridad —todo depende de un rostro consistente y creíble.
+                        </div>
+                    </article>
+
+                    <!-- PASO 2 -->
+                    <article class="step-card" id="step-2" data-reveal>
+                        <div class="step-number">02</div>
+                        <div class="step-meta">
+                            <span class="step-badge">2</span>
+                            <span class="step-phase">Dataset visual</span>
+                        </div>
+                        <h3>PASO 2 — CONSTRUIR TU DATASET VISUAL</h3>
+                        <p class="step-desc">
+                            Una sola foto no alcanza. Necesitas entre 10 y 20 imágenes del mismo rostro clonado en distintas poses, outfits, ángulos y escenarios.
+                        </p>
+                        <p class="step-desc">
+                            Una sola imagen se ve tiesa. Un dataset le da flexibilidad a tu clon: escenas caminando, hablando, gesticulando, en distintos moods. Y eso también aumenta tu presencia de autoridad, porque la gente te ve en múltiples contextos.
+                        </p>
+
+                        <div class="options-grid options-grid-2">
+                            <div class="option-box">
+                                <div class="option-header">
+                                    <span class="option-letter">P</span>
+                                    <div class="option-info">
+                                        <span class="option-type">Prompt ejemplo para dataset</span>
+                                        <h4 class="option-title">Variaciones consistentes</h4>
+                                    </div>
+                                </div>
+                                <div class="prompt-container">
+                                    <div class="prompt-header">
+                                        <span class="prompt-tag">Prompt ejemplo</span>
+                                        <button class="btn-copy-prompt" type="button"><span class="btn-text">Copiar</span></button>
+                                    </div>
+                                    <div class="prompt-body">Plano medio fotorrealista de esa persona caminando naturalmente, misma identidad y proporciones. Tomado con lente 50mm en exteriores, luz natural suave, movimiento real de tela, sombras limpias.</div>
+                                </div>
+                            </div>
+
+                            <div class="option-box">
+                                <div class="option-header">
+                                    <span class="option-letter">V</span>
+                                    <div class="option-info">
+                                        <span class="option-type">Variaciones</span>
+                                        <h4 class="option-title">Tu dataset debe incluir</h4>
+                                    </div>
+                                </div>
+                                <ul class="option-features">
+                                    <li>De pie / sentado / caminando</li>
+                                    <li>Sonriendo / serio / hablando</li>
+                                    <li>Outfit casual / oficina / elegante</li>
+                                    <li>Ángulos: frontal, ¾, perfil</li>
+                                    <li>Interior y exterior</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step-critical">
+                            <strong>Por qué este paso es crítico</strong><br>
+                            Sin variedad, tu clon va a parecer una foto estática repetida. Con dataset, parece una persona real con vida.
+                        </div>
+                    </article>
+
+                    <!-- PASO 3 -->
+                    <article class="step-card" id="step-3" data-reveal>
+                        <div class="step-number">03</div>
+                        <div class="step-meta">
+                            <span class="step-badge">3</span>
+                            <span class="step-phase">4K-8K</span>
+                        </div>
+                        <h3>PASO 3 — ESCALAR A 4K–8K (NO NEGOCIABLE)</h3>
+                        <p class="step-desc">
+                            Este paso es lo que separa el contenido amateur del que parece campaña real.
+                        </p>
+                        <p class="step-desc">
+                            Sin resolución 4K+, las herramientas de movimiento generan artefactos, pixelado y se nota la IA al instante. Upscaling mejora textura de piel, elimina ruido y da claridad cinematográfica.
+                        </p>
+
+                        <div class="instruction-strip">
+                            <div class="arrow-steps">
+                                <span class="step-pill">Subir imagen</span>
+                                <span class="arr">→</span>
+                                <span class="step-pill">Elegir x4 o x8</span>
+                                <span class="arr">→</span>
+                                <span class="step-pill">Activar modo detalle</span>
+                                <span class="arr">→</span>
+                                <span class="step-pill">Exportar en PNG 4K–8K</span>
+                            </div>
+                        </div>
+
+                        <div class="options-grid">
+                            <div class="option-box">
+                                <div class="option-header">
+                                    <span class="tool-logo-wrap logo-violet">
+                                        <img src="nombres%20de%20herramientas/OpenArt%20Upscaler.png" alt="OpenArt" class="tool-logo-img">
+                                    </span>
+                                    <div class="option-info">
+                                        <span class="option-type">Opción A</span>
+                                        <h4 class="option-title">OpenArt</h4>
+                                    </div>
+                                </div>
+                                <p class="option-best-for">Rápido, balanceado, buena claridad general.</p>
+                            </div>
+
+                            <div class="option-box">
+                                <div class="option-header">
+                                    <span class="tool-logo-wrap logo-rose">
+                                        <img src="nombres%20de%20herramientas/Magnific%20AI.jpg" alt="Magnific AI" class="tool-logo-img">
+                                    </span>
+                                    <div class="option-info">
+                                        <span class="option-type">Opción B</span>
+                                        <h4 class="option-title">Magnific</h4>
+                                    </div>
+                                </div>
+                                <p class="option-best-for">Detalle ultra. Insuperable para poros y textura.</p>
+                            </div>
+
+                            <div class="option-box">
+                                <div class="option-header">
+                                    <span class="tool-logo-wrap logo-teal">
+                                        <img src="nombres%20de%20herramientas/Lupa%20AI.png" alt="Lupa AI" class="tool-logo-img">
+                                    </span>
+                                    <div class="option-info">
+                                        <span class="option-type">Opción C</span>
+                                        <h4 class="option-title">Lupa AI</h4>
+                                    </div>
+                                </div>
+                                <p class="option-best-for">El más realista. Diseñado específicamente para rostros humanos.</p>
+                            </div>
+
+                            <div class="option-box">
+                                <div class="option-header">
+                                    <span class="tool-logo-wrap logo-sky">
+                                        <img src="nombres%20de%20herramientas/Google%20Flow.jpg" alt="Google Flow" class="tool-logo-img">
+                                    </span>
+                                    <div class="option-info">
+                                        <span class="option-type">Opción D</span>
+                                        <h4 class="option-title">Google Flow</h4>
+                                    </div>
+                                </div>
+                                <p class="option-best-for">El más versátil. Integra upscale con flujos de trabajo completos.</p>
+                                <ul class="option-features">
+                                    <li>Permite encadenar mejoras automáticamente</li>
+                                    <li>Excelente para procesar varias imágenes en lote</li>
+                                    <li>Ideal si estás escalando producción de contenido</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step-critical">
+                            <strong>Por qué este paso es crítico</strong><br>
+                            Saltarse este paso es la razón #1 por la que el contenido se ve "hecho con IA". Hacer este paso es la razón #1 por la que el contenido se ve hecho por una agencia.
+                        </div>
+                    </article>
+
+                    <!-- PASO 4 -->
+                    <article class="step-card" id="step-4" data-reveal>
+                        <div class="step-number">04</div>
+                        <div class="step-meta">
+                            <span class="step-badge">4</span>
+                            <span class="step-phase">Voz</span>
+                        </div>
+                        <h3>PASO 4 — CLONAR TU VOZ</h3>
+                        <p class="step-desc">
+                            La voz es el alma de tu avatar. Sin voz propia, no eres tú: es un robot.
+                        </p>
+                        <p class="step-desc">
+                            Las herramientas de clonación replican tu tono, tu respiración, tus pausas, tu emoción. Una voz clonada bien hecha es lo que hace que la gente te crea —y lo que activa la autoridad.
+                        </p>
+
+                        <div class="options-grid options-grid-2">
+                            <div class="option-box">
+                                <div class="option-header">
+                                    <span class="tool-logo-wrap logo-slate">
+                                        <img src="nombres%20de%20herramientas/ElevenLabs.png" alt="ElevenLabs" class="tool-logo-img">
+                                    </span>
+                                    <div class="option-info">
+                                        <span class="option-type">Opción A</span>
+                                        <h4 class="option-title">ElevenLabs</h4>
+                                    </div>
+                                </div>
+                                <p class="option-best-for">El estándar de la industria.</p>
+                                <ul class="option-features">
+                                    <li>Replica acento, respiración, micro-pausas</li>
+                                    <li>Calidad de estudio</li>
+                                    <li>Soporta más de 30 idiomas</li>
+                                </ul>
+                                <div class="prompt-container">
+                                    <div class="prompt-header">
+                                        <span class="prompt-tag">Prompt ejemplo de voz</span>
+                                        <button class="btn-copy-prompt" type="button"><span class="btn-text">Copiar</span></button>
+                                    </div>
+                                    <div class="prompt-body">Clonar esta voz con claridad cálida y media-grave, micro-pausas naturales, acento limpio, respiración suave y ritmo articulado. Preservar tonalidad emocional para tutoriales y estilo de conversación profesional.</div>
+                                </div>
+                            </div>
+
+                            <div class="option-box">
+                                <div class="option-header">
+                                    <span class="tool-logo-wrap logo-gold">
+                                        <img src="nombres%20de%20herramientas/Hedra%20Voice.png" alt="Hedra Voice" class="tool-logo-img">
+                                    </span>
+                                    <div class="option-info">
+                                        <span class="option-type">Opción B</span>
+                                        <h4 class="option-title">Hedra Voice</h4>
+                                    </div>
+                                </div>
+                                <p class="option-best-for">Para clones que también hablan en video.</p>
+                                <ul class="option-features">
+                                    <li>Combina voz + sincronización de boca</li>
+                                    <li>Ideal para talking-heads</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step-critical">
+                            <strong>Por qué este paso es crítico</strong><br>
+                            Una imagen sin tu voz es un avatar genérico. Tu voz es lo que hace que el contenido sea tuyo —y lo que hace que las marcas paguen.
+                        </div>
+                    </article>
+
+                    <!-- PASO 5 -->
+                    <article class="step-card" id="step-5" data-reveal>
+                        <div class="step-number">05</div>
+                        <div class="step-meta">
+                            <span class="step-badge">5</span>
+                            <span class="step-phase">Movimiento</span>
+                        </div>
+                        <h3>PASO 5 — IMAGEN A VIDEO (GENERACIÓN DE MOVIMIENTO)</h3>
+                        <p class="step-desc">
+                            Aquí es donde tu imagen estática se vuelve un video real. Las herramientas interpretan el rostro, el cuerpo y el entorno para crear movimiento natural.
+                        </p>
+
+                        <div class="options-grid">
+                            <div class="option-box">
+                                <div class="option-header">
+                                    <span class="tool-logo-wrap logo-sky">
+                                        <img src="nombres%20de%20herramientas/Google%20VEO%203.1.png" alt="VEO 3.1" class="tool-logo-img">
+                                    </span>
+                                    <div class="option-info">
+                                        <span class="option-type">Opción A</span>
+                                        <h4 class="option-title">VEO 3.1</h4>
+                                    </div>
+                                </div>
+                                <p class="option-best-for">La mejor para campañas cinematográficas.</p>
+                                <ul class="option-features">
+                                    <li>Control total por JSON</li>
+                                    <li>Movimientos multi-capa</li>
+                                    <li>Controla luz, entorno y física</li>
+                                    <li>Ideal para contenido de marca premium</li>
+                                </ul>
+                                <div class="prompt-container">
+                                    <div class="prompt-header">
+                                        <span class="prompt-tag">Ejemplo VEO JSON</span>
+                                        <button class="btn-copy-prompt" type="button"><span class="btn-text">Copiar</span></button>
+                                    </div>
+                                    <div class="prompt-body">{
+ "description": "Sujeto cinematográfico de pie con movimiento suave y giro sutil de cabeza.",
+ "camera": "estática con dolly lento",
+ "lighting": "luz clave difusa suave",
+ "subject_behavior": {"movement": "respiración suave, micro-giro de cabeza"},
+ "environment": "estudio limpio"
+}</div>
+                                </div>
+                            </div>
+
+                            <div class="option-box">
+                                <div class="option-header">
+                                    <span class="tool-logo-wrap logo-ember">
+                                        <img src="nombres%20de%20herramientas/Kling%20AI.jpg" alt="Kling AI" class="tool-logo-img">
+                                    </span>
+                                    <div class="option-info">
+                                        <span class="option-type">Opción B</span>
+                                        <h4 class="option-title">Kling AI</h4>
+                                    </div>
+                                </div>
+                                <p class="option-best-for">La más fácil para movimiento humano natural.</p>
+                                <ul class="option-features">
+                                    <li>Giros de cabeza y caminar suaves</li>
+                                    <li>Parallax limpio en fondo</li>
+                                    <li>Sin JSON, solo texto</li>
+                                    <li>Perfecta para TikTok y Reels</li>
+                                </ul>
+                                <div class="prompt-container">
+                                    <div class="prompt-header">
+                                        <span class="prompt-tag">Prompt Kling</span>
+                                        <button class="btn-copy-prompt" type="button"><span class="btn-text">Copiar</span></button>
+                                    </div>
+                                    <div class="prompt-body">Movimiento cinematográfico con lente 35mm. Parpadeo natural y movimiento sutil de cabeza, ligero movimiento de hombros, postura calmada. Fondo con parallax. Emoción cálida, confiada, humana.</div>
+                                </div>
+                            </div>
+
+                            <div class="option-box">
+                                <div class="option-header">
+                                    <span class="tool-logo-wrap logo-violet">
+                                        <img src="nombres%20de%20herramientas/Seedance%202.0.jpg" alt="Seedance 2.0" class="tool-logo-img">
+                                    </span>
+                                    <div class="option-info">
+                                        <span class="option-type">Opción C</span>
+                                        <h4 class="option-title">Seedance 2.0</h4>
+                                    </div>
+                                </div>
+                                <p class="option-best-for">La más realista para movimiento corporal completo.</p>
+                                <ul class="option-features">
+                                    <li>Movimiento de cuerpo entero ultra fluido</li>
+                                    <li>Gestos y expresiones naturales</li>
+                                    <li>Excelente para escenas largas</li>
+                                    <li>Ideal para UGC que vende producto</li>
+                                </ul>
+                            </div>
+
+                            <div class="option-box">
+                                <div class="option-header">
+                                    <span class="tool-logo-wrap logo-slate">
+                                        <img src="nombres%20de%20herramientas/Motion%20by%20Google.png" alt="Motion by Google" class="tool-logo-img">
+                                    </span>
+                                    <div class="option-info">
+                                        <span class="option-type">Opción D</span>
+                                        <h4 class="option-title">Motion by Google</h4>
+                                    </div>
+                                </div>
+                                <p class="option-best-for">El más limpio para movimiento sutil.</p>
+                                <ul class="option-features">
+                                    <li>Optimizado para talking-heads</li>
+                                    <li>Sincronización facial precisa</li>
+                                    <li>Movimiento físicamente coherente</li>
+                                    <li>Perfecto para contenido educativo y autoridad</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="step-critical">
+                            <strong>Por qué este paso es crítico</strong><br>
+                            Movimiento mediocre = se nota la IA al instante. Movimiento bien hecho = la gente jura que eres tú grabándote.
+                        </div>
+                    </article>
+
+                    <!-- PASO 6 -->
+                    <article class="step-card" id="step-6" data-reveal>
+                        <div class="step-number">06</div>
+                        <div class="step-meta">
+                            <span class="step-badge">6</span>
+                            <span class="step-phase">Máquina de contenido</span>
+                        </div>
+                        <h3>PASO 6 — ENSAMBLAJE FINAL (TU MÁQUINA DE CONTENIDO)</h3>
+                        <p class="step-desc">
+                            Exportas el video animado → sincronizas la voz → agregas captions → publicas.
+                        </p>
+                        <p class="step-desc">
+                            Repites el proceso. Tu clon se convierte en una máquina de contenido diaria sin que tú salgas en cámara ni una sola vez.
+                        </p>
+
+                        <table class="summary-table">
+                            <thead>
+                                <tr>
+                                    <th>Paso</th>
+                                    <th>Acción</th>
+                                    <th>Función estratégica</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>Crear rostro</td><td>Base de identidad</td></tr>
+                                <tr><td>2</td><td>Construir dataset</td><td>Variedad visual</td></tr>
+                                <tr><td>3</td><td>Upscale 4K-8K</td><td>Listo para video</td></tr>
+                                <tr><td>4</td><td>Clonar voz</td><td>Presencia auténtica</td></tr>
+                                <tr><td>5</td><td>Generar movimiento</td><td>Realismo humano</td></tr>
+                                <tr><td>6</td><td>Ensamblar y publicar</td><td>Contenido de autoridad</td></tr>
+                            </tbody>
+                        </table>
+
+                        <div class="step-critical">
+                            Cada paso construye sobre el anterior. Pasos débiles rompen la ilusión. Pasos fuertes crean un clon perfecto.
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════ TESTIMONIALS ═══════════════════ -->
+        <section class="testimonials-section" id="testimonios" data-flow-section>
+            <div class="container" data-flow-inner>
+                <div class="section-header section-header--dark" data-reveal>
+                    <span class="section-tag section-tag--dark"><span class="tag-dot"></span> Resultados reales</span>
+                    <h2 style="color:#fff; margin-top:1rem;">Lo que dicen los creadores</h2>
+                    <p style="color:rgba(255,255,255,0.45);">Creadores que dejaron de esperar y empezaron a cobrar como agencia.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card" data-reveal>
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-quote">
+                            "En dos semanas tenía mi clon listo y ya estaba enviando propuestas a marcas. La primera cerró en 350 USD. El sistema es brutalmente claro y funciona."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar-fallback">MR</div>
+                            <div class="author-info">
+                                <span class="author-name">María R.</span>
+                                <span class="author-role">Creadora UGC · Bogotá</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" data-reveal data-reveal-delay="1">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-quote">
+                            "Tenía miedo de salir en cámara. Modo Creador me enseñó a clonarme con IA y ahora tengo contenido publicándose todos los días sin grabarme ni una sola vez."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar-fallback">JL</div>
+                            <div class="author-info">
+                                <span class="author-name">Julián L.</span>
+                                <span class="author-role">Creador de contenido · CDMX</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" data-reveal data-reveal-delay="2">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <blockquote class="testimonial-quote">
+                            "Los prompts del paso 1 son exactamente lo que necesitaba. Mi avatar preserva mi cara al 100% y las marcas no pueden creer que es IA. Vale cada centavo."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-avatar-fallback">AP</div>
+                            <div class="author-info">
+                                <span class="author-name">Andrea P.</span>
+                                <span class="author-role">UGC Creator · Buenos Aires</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════ TRUTH ═══════════════════ -->
+        <section class="truth-section" id="verdad" data-flow-section>
+            <div class="container" data-flow-inner>
+                <span class="truth-eyebrow">AHORA, LA VERDAD INCÓMODA</span>
+                <h2>Ya tienes el mapa.</h2>
+                <p class="truth-intro">
+                    Pero el mapa no es el sistema.
+                </p>
+
+                <div class="truth-questions">
+                    <div class="truth-q" data-reveal>
+                        <span class="q-num">01</span>
+                        <p>¿Cuál de las herramientas elegir si nunca las has usado?</p>
+                    </div>
+                    <div class="truth-q" data-reveal data-reveal-delay="1">
+                        <span class="q-num">02</span>
+                        <p>¿Qué prompt exacto usar para que la IA NO te cambie la cara?</p>
+                    </div>
+                    <div class="truth-q" data-reveal data-reveal-delay="2">
+                        <span class="q-num">03</span>
+                        <p>¿Cómo combinar voz + imagen + video sin que se vea falso?</p>
+                    </div>
+                    <div class="truth-q" data-reveal data-reveal-delay="3">
+                        <span class="q-num">04</span>
+                        <p>¿Qué decir en el video para que las marcas te paguen?</p>
+                    </div>
+                    <div class="truth-q" data-reveal data-reveal-delay="4">
+                        <span class="q-num">05</span>
+                        <p>¿Cómo enviar tu UGC a marcas reales y cobrar como agencia?</p>
+                    </div>
+                </div>
+
+                <p class="truth-cta-text" data-reveal>
+                    Eso no se aprende en una guía.<br>
+                    Eso se aprende con un sistema ya probado: <strong>"Modo Creador"</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- ═══════════════════ PROGRAMA ═══════════════════ -->
+        <section class="programa-section" id="programa" data-flow-section>
+            <div class="container" data-flow-inner>
+                <div class="programa-inner">
+                    <span class="section-tag" data-reveal><span class="tag-dot"></span> MODO CREADOR</span>
+                    <h2 data-reveal data-reveal-delay="1">MODO CREADOR</h2>
+                    <p class="programa-desc" data-reveal data-reveal-delay="2">
+                        El sistema completo para crear cualquier tipo de contenido.
+                    </p>
+
+                    <div class="format-tags" data-reveal data-reveal-delay="3">
+                        <span class="format-tag">Videos cortos</span>
+                        <span class="format-tag">Videos Largos</span>
+                        <span class="format-tag">Podcast</span>
+                        <span class="format-tag">UGC con IA</span>
+                    </div>
+
+                    <p class="programa-desc" data-reveal>
+                        Todo lo que se te ocurra. — como si tuvieras una agencia, un estudio y un equipo de producción detrás.
+                    </p>
+
+                    <div class="programa-grid">
+                        <div class="programa-item" data-reveal><div class="programa-check">✓</div><p>Los prompts exactos que uso (probados, no genéricos)</p></div>
+                        <div class="programa-item" data-reveal><div class="programa-check">✓</div><p>Las herramientas que sí valen la pena</p></div>
+                        <div class="programa-item" data-reveal><div class="programa-check">✓</div><p>Cómo clonar tu cara, tu voz y tu movimiento sin que se vea falso</p></div>
+                        <div class="programa-item" data-reveal><div class="programa-check">✓</div><p>Cómo escribir guiones que vendan</p></div>
+                        <div class="programa-item" data-reveal><div class="programa-check">✓</div><p>Cómo editar desde tu celular como una marca real</p></div>
+                        <div class="programa-item" data-reveal><div class="programa-check">✓</div><p>Cómo conseguir clientes y oportunidades con tu nuevo contenido</p></div>
+                        <div class="programa-item" data-reveal><div class="programa-check">✓</div><p>Cómo crear tu portafolio de UGC con IA</p></div>
+                        <div class="programa-item" data-reveal><div class="programa-check">✓</div><p>Cómo contactar a las marcas que SÍ pagan</p></div>
+                        <div class="programa-item" data-reveal><div class="programa-check">✓</div><p>Automatización de creación de contenido con Claude</p></div>
+                        <div class="programa-item" data-reveal><div class="programa-check">✓</div><p>Y mucho más…</p></div>
+                    </div>
+
+                    <p class="programa-desc" data-reveal>
+                        Pago único. Acceso de por vida. Todas las actualizaciones futuras incluidas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════ OFERTA / LEAD MAGNET ═══════════════════ -->
+        <section class="oferta-section" id="oferta" data-flow-section>
+            <!-- Pulsing ambient rings -->
+            <div class="oferta-rings" aria-hidden="true">
+                <div class="oferta-ring"></div>
+                <div class="oferta-ring"></div>
+                <div class="oferta-ring"></div>
+            </div>
+
+            <!-- Particle burst layer -->
+            <div class="oferta-particles" aria-hidden="true" id="oferta-particles"></div>
+
+            <div class="container">
+                <div class="oferta-card" data-reveal data-flow-inner>
+                    <span class="oferta-badge">Solo los primeros 50 tendrán acceso a 29 USD</span>
+                    <h2>No esperes a estar listo.</h2>
+                    <p class="oferta-desc">
+                        Solo los primeros 50 tendrán acceso a 29 USD. Después sube a 59 USD.
+                    </p>
+                    <!-- Price display -->
+                    <div class="oferta-pricing">
+                        <span class="price-old">59 USD</span>
+                        <span class="price-new"><small>$</small>29<small> USD</small></span>
+                    </div>
+                    <p class="oferta-urgency">Solo los primeros 50 accesos. El precio sube en cuanto se agoten.</p>
+
+                    <p class="oferta-closing font-accent">
+                        Empieza a verte como la marca que ya eres.
+                    </p>
+                    <!-- TODO: agregar aquí la URL final de pago o checkout cuando esté disponible. -->
+                    <a class="btn-oferta" id="btn-oferta-main" href="#">
+                        QUIERO ENTRAR A MODO CREADOR <span class="btn-arrow">→</span>
+                    </a>
+
+                    <!-- Trust indicators -->
+                    <div class="oferta-trust">
+                        <div class="trust-item">🔒 Pago seguro</div>
+                        <div class="trust-item">♾ Acceso de por vida</div>
+                        <div class="trust-item">⚡ Acceso inmediato</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="site-footer">
         <div class="container footer-content">
             <div class="footer-logo">Modo<span>Creador</span></div>
-            <p class="footer-text">El sistema inteligente para optimizar tu autoridad y presencia en la Creator Economy digital con IA.</p>
             <ul class="footer-links">
-                <li><a href="#hero" class="footer-link">El Problema</a></li>
-                <li><a href="#sistema" class="footer-link">El Sistema</a></li>
-                <li><a href="#verdad" class="footer-link">La Verdad</a></li>
-                <li><a href="#programa" class="footer-link">El Programa</a></li>
-                <li><a href="#oferta" class="footer-link">Modo Creador</a></li>
+                <li><a href="#hero" class="footer-link">Inicio</a></li>
+                <li><a href="#sistema" class="footer-link">Sistema</a></li>
+                <li><a href="#verdad" class="footer-link">Verdad</a></li>
+                <li><a href="#programa" class="footer-link">Modo Creador</a></li>
+                <li><a href="#oferta" class="footer-link">Entrar</a></li>
             </ul>
         </div>
-        <p class="footer-copy">&copy; 2026 Modo Creador. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
     <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>
