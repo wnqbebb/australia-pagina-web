@@ -51,6 +51,16 @@
     --muted:        #a89f94;
     --muted-light:  #d8d3cc;
 
+    /* ── SEMANTIC ALIAS TOKENS (master prompt palette) ── */
+    --bg-main:          #f5f1ea;
+    --bg-card:          #ffffff;
+    --primary-cta:      #006b5b;
+    --text-authority:   #101820;
+    --text-emotional:   #3d2c2e;
+    --urgency-highlight:#ffcd00;
+    --text-neutral:     #a89f94;
+    --font-creative:    'Bootzy TM', 'Cormorant Garamond', serif;
+
     --space-xs:  0.5rem;
     --space-sm:  1rem;
     --space-md:  2rem;
@@ -716,10 +726,11 @@ h4 { font-size: 1.1rem; }
     flex-shrink: 0;
 }
 
-/* Prompt block */
+/* Prompt block — light editorial style */
 .prompt-container {
-    background: var(--ink);
-    border-radius: var(--r-sm);
+    background: #faf8f5;
+    border-left: 3px solid var(--cta);
+    border-radius: 0 var(--r-sm) var(--r-sm) 0;
     overflow: hidden;
     margin-top: 0.5rem;
 }
@@ -728,34 +739,42 @@ h4 { font-size: 1.1rem; }
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 0.75rem;
-    background: rgba(255,255,255,0.04);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: rgba(0,107,91,0.04);
+    border-bottom: 1px solid rgba(168,159,148,0.12);
 }
 .prompt-tag {
     font-size: 0.67rem;
-    color: var(--gold);
+    color: var(--cta);
     text-transform: uppercase;
     letter-spacing: 0.07em;
+    font-weight: 700;
 }
 .btn-copy-prompt {
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    color: rgba(255,255,255,0.35);
+    background: var(--surface);
+    border: 1px solid var(--muted-light);
+    color: var(--ink);
     font-size: 0.7rem;
-    cursor: none;
-    transition: color 0.2s;
-    background: none;
-    border: none;
+    padding: 0.28rem 0.65rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
-.btn-copy-prompt:hover { color: #fff; }
+.btn-copy-prompt:hover {
+    background: var(--cta);
+    color: #fff;
+    border-color: var(--cta);
+}
 .btn-copy-prompt .btn-text { font-family: var(--font-body); }
 .prompt-body {
     padding: 0.9rem;
-    font-size: 0.79rem;
-    color: rgba(255,255,255,0.65);
+    font-size: 0.82rem;
+    color: var(--ink);
     line-height: 1.65;
     font-family: 'SF Mono', 'Fira Code', monospace;
+    opacity: 0.85;
 }
 
 /* Critical insight bar */
@@ -2262,7 +2281,7 @@ h4 { font-size: 1.1rem; }
 }
 
 .identity-placeholder {
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 1 / 1;
     background: linear-gradient(145deg, #f0ece4 0%, #e8e3da 100%);
     display: flex;
     flex-direction: column;
@@ -2271,6 +2290,40 @@ h4 { font-size: 1.1rem; }
     gap: 0.5rem;
     position: relative;
     border-bottom: 1px solid rgba(168,159,148,0.1);
+    overflow: hidden;
+}
+
+/* Real image variant */
+.identity-placeholder--real {
+    background: var(--ink);
+}
+.identity-placeholder--real img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s var(--ease-expo);
+}
+.identity-card:hover .identity-placeholder--real img {
+    transform: scale(1.04);
+}
+.identity-placeholder--tall  { aspect-ratio: 9 / 16; }
+.identity-placeholder--wide  { aspect-ratio: 16 / 9; }
+
+/* Resolution badge */
+.identity-res-badge {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    background: rgba(255,255,255,0.92);
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: 0.6rem;
+    font-weight: 700;
+    padding: 0.22rem 0.55rem;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    backdrop-filter: blur(8px);
 }
 
 .placeholder-inner {
@@ -2301,16 +2354,19 @@ h4 { font-size: 1.1rem; }
 
 .identity-angle-label {
     position: absolute;
-    bottom: 0.6rem;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 0.65rem;
+    left: 0.65rem;
     font-family: var(--font-display);
     font-size: 0.65rem;
     font-weight: 700;
-    color: var(--muted);
+    color: #fff;
+    background: var(--ink);
+    padding: 0.22rem 0.65rem;
+    border-radius: 20px;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
     white-space: nowrap;
+    backdrop-filter: blur(8px);
 }
 
 .identity-prompt-block {
@@ -2318,12 +2374,12 @@ h4 { font-size: 1.1rem; }
     display: flex;
     flex-direction: column;
     gap: 0.35rem;
-    background: var(--ink);
+    background: var(--bg);
 }
 
 .identity-prompt-tag {
     font-size: 0.6rem;
-    color: var(--gold);
+    color: var(--cta);
     text-transform: uppercase;
     letter-spacing: 0.08em;
     font-family: var(--font-display);

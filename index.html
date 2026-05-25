@@ -131,8 +131,8 @@
                 <p class="pain-text" data-reveal>
                     Pero cada vez que abres la cámara, te paralizas.
                 </p>
-                <blockquote class="pain-quote font-accent" data-reveal>
-                    No te sientes listo. No te ves "profesional". Y mientras tanto, otros creadores —con menos talento que tú— están consiguiendo marcas, ventas y autoridad.
+                <blockquote class="pain-quote" data-reveal>
+                    No te sientes listo. No te ves <span class="font-accent">"profesional"</span>. Y mientras tanto, otros creadores —con menos talento que tú— están consiguiendo marcas, ventas y autoridad.
                 </blockquote>
                 <p class="pain-text" data-reveal>
                     No es justo.
@@ -198,47 +198,63 @@
                             Por eso se usan herramientas especializadas en preservación de identidad, micro-detalle de piel y calidad RAW fotográfica.
                         </p>
 
-                        <!-- Identity grid: 4K portrait placeholders with prompts -->
+                        <!-- Identity grid: real 4K renders with prompts -->
                         <div class="identity-grid" data-reveal>
+
                             <div class="identity-card">
-                                <div class="identity-placeholder">
-                                    <div class="placeholder-inner">
-                                        <div class="placeholder-icon">◎</div>
-                                        <span class="placeholder-res">4K · 8K</span>
-                                    </div>
-                                    <span class="identity-angle-label">Frontal</span>
+                                <div class="identity-placeholder identity-placeholder--real">
+                                    <img src="imagenes%20para%20la%20web/1.jpeg" alt="Rostro Frontal 4K RAW" loading="lazy">
+                                    <span class="identity-angle-label">Frontal 1:1</span>
+                                    <span class="identity-res-badge">4K RAW</span>
                                 </div>
                                 <div class="identity-prompt-block">
-                                    <span class="identity-prompt-tag">Prompt generado</span>
-                                    <p>Retrato fotorrealista 85mm f/1.4, frontal directo, fondo blanco limpio, iluminación de estudio difusa, misma identidad facial exacta, poros y textura de piel RAW.</p>
+                                    <span class="identity-prompt-tag">Prompt de Caracterización</span>
+                                    <div class="prompt-container">
+                                        <div class="prompt-header">
+                                            <span class="prompt-tag">Dataset Base</span>
+                                            <button class="btn-copy-prompt" type="button"><span class="btn-text">Copiar</span></button>
+                                        </div>
+                                        <div class="prompt-body">Retrato fotorrealista 85mm f/1.4, frontal directo, fondo blanco limpio, iluminación de estudio difusa, misma identidad facial exacta, poros y textura de piel RAW.</div>
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="identity-card">
-                                <div class="identity-placeholder">
-                                    <div class="placeholder-inner">
-                                        <div class="placeholder-icon">◎</div>
-                                        <span class="placeholder-res">4K · 8K</span>
-                                    </div>
-                                    <span class="identity-angle-label">Tres cuartos</span>
+                                <div class="identity-placeholder identity-placeholder--real identity-placeholder--tall">
+                                    <img src="imagenes%20para%20la%20web/2.png" alt="Cuerpo Completo 9:16" loading="lazy">
+                                    <span class="identity-angle-label">Cuerpo Completo 9:16</span>
+                                    <span class="identity-res-badge">8K</span>
                                 </div>
                                 <div class="identity-prompt-block">
-                                    <span class="identity-prompt-tag">Prompt generado</span>
-                                    <p>Retrato 3/4 hiperrealista, ángulo izquierdo, luz Rembrandt suave, misma identidad facial, cabello y proporciones exactas. Skin detail HDR.</p>
+                                    <span class="identity-prompt-tag">Prompt de Consistencia</span>
+                                    <div class="prompt-container">
+                                        <div class="prompt-header">
+                                            <span class="prompt-tag">Dataset Proporciones</span>
+                                            <button class="btn-copy-prompt" type="button"><span class="btn-text">Copiar</span></button>
+                                        </div>
+                                        <div class="prompt-body">Plano entero fotorrealista de pie, ropa consistente, misma identidad, iluminación suave de estudio, fondo minimalista blanco, hiperrealismo de proporciones corporales.</div>
+                                    </div>
                                 </div>
                             </div>
+
                             <div class="identity-card">
-                                <div class="identity-placeholder">
-                                    <div class="placeholder-inner">
-                                        <div class="placeholder-icon">◎</div>
-                                        <span class="placeholder-res">4K · 8K</span>
-                                    </div>
-                                    <span class="identity-angle-label">Perfil</span>
+                                <div class="identity-placeholder identity-placeholder--real identity-placeholder--wide">
+                                    <img src="imagenes%20para%20la%20web/3.jpeg" alt="UGC Contexto Real 16:9" loading="lazy">
+                                    <span class="identity-angle-label">UGC Contexto 16:9</span>
+                                    <span class="identity-res-badge">4K</span>
                                 </div>
                                 <div class="identity-prompt-block">
-                                    <span class="identity-prompt-tag">Prompt generado</span>
-                                    <p>Perfil izquierdo RAW, estructura ósea precisa, mismo cabello, luz lateral limpia, fondo neutro gris suave. Micro-detalle de piel fotográfico.</p>
+                                    <span class="identity-prompt-tag">Prompt de Entorno</span>
+                                    <div class="prompt-container">
+                                        <div class="prompt-header">
+                                            <span class="prompt-tag">Dataset Exterior</span>
+                                            <button class="btn-copy-prompt" type="button"><span class="btn-text">Copiar</span></button>
+                                        </div>
+                                        <div class="prompt-body">Plano medio cinematográfico en exteriores, ángulo urbano real, luz natural, misma identidad facial exacta, micro-detalle de textura de piel, lente 50mm.</div>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
 
                         <div class="tool-default-note" data-reveal>
